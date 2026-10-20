@@ -53,7 +53,7 @@ def synch_scroll():
 	callingViewPosX, callingViewPosY = current_view.viewport_position()
 	origCallingViewPosX, origCallingViewPosY = current_view.settings().get('origPos')
 	# print ('modified. origCallingViewPos=', origCallingViewPosX, origCallingViewPosY, 'callingViewPos= ', callingViewPosX, callingViewPosY)
-	if callingViewPosX != origCallingViewPosY or callingViewPosY != origCallingViewPosY: #and it moved vertically or horizontally
+	if callingViewPosX != origCallingViewPosX or callingViewPosY != origCallingViewPosY: #and it moved vertically or horizontally
 		# print ("it moved")
 		for view in current_view.window().views():
 			if view.settings().get('syncScroll') and view.id() != current_view.id(): #if view has syncScroll enabled AND we're not talking about the same view as view
